@@ -17,11 +17,8 @@ function handleData(d) {
       sum += +input;
     }
   }
-  let maxCalories = Math.max(...sums);
-  console.log("Max Calories ", maxCalories);
-  let sumOfTopThree = sums
-    .sort((a, b) => b - a)
-    .slice(0, 3)
-    .reduce((acc, cur) => acc + cur);
-  console.log("Top Three Sum: ", sumOfTopThree);
+  let sortedSums = sums.sort((a, b) => b - a);
+  console.log("Part 1: ", sortedSums[0]);
+  let sumOfTopThree = sortedSums.slice(0, 3).reduce((acc, cur) => acc + cur);
+  console.log("Part 2: ", sumOfTopThree);
 }
