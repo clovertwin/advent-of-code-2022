@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+// I gave up on this one, all credit here goes to shahata
+
 fs.readFile("input.txt", "utf8", (err, data) => {
   if (err) throw err;
   const newData = data.split("\n");
