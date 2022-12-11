@@ -6,19 +6,16 @@ fs.readFile("input.txt", "utf8", (err, data) => {
   partTwo(data);
 });
 
-/***
+/**
  *
  * All credit goes to github.com/shahata for this algorithm.
  * I am just posting so I can study it.
  *
- */
+ **/
 
 function partOne(d, len = 2, message = "Part One:") {
-  /*
-  create steps, which is an array of arrays containing the directions provided.
-  create knots, an array of length provided where each item is an object with x and y set to 0.
-  create visited, 
-  */
+  //create steps, which is an array of arrays containing the directions provided.
+  //create knots, an array of length provided where each item is an object with x and y set to 0.
   const steps = d.split("\n").map((line) => line.split(" "));
   const knots = new Array(len).fill().map(() => ({ x: 0, y: 0 }));
   //create a set to store unique locations that tail has visited.
