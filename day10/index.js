@@ -56,5 +56,5 @@ function handleData(d) {
   const signal = signalStrength.reduce((acc, cur) => acc + cur);
   console.log(`Part One: ${signal}`);
   console.log("Part Two:");
-  console.log(crt.forEach((line) => console.log(line.join(""))));
+  crt.forEach((line) => console.log(line.join("")));
 }
