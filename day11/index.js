@@ -22,8 +22,6 @@ function getMonkeys(d) {
         .split(":")[1]
         .split(",")
         .map((num) => +num);
-      monkeys[monkeys.length - 1].worryLevel =
-        monkeys[monkeys.length - 1].items[0];
     }
     if (trimmedLine.startsWith("Operation")) {
       monkeys[monkeys.length - 1].operation = trimmedLine.slice(17).split(" ");
