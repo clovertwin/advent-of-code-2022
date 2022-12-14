@@ -39,9 +39,6 @@ function getMonkeys(d) {
 function handleData(d, rounds, part = 1) {
   const data = d.split("\n");
   const monkeys = getMonkeys(data);
-  const superModulo = monkeys
-    .map((m) => m.divisible)
-    .reduce((acc, cur) => acc * cur);
   for (let i = 0; i < rounds; i++) {
     for (let monkey of monkeys) {
       let length = monkey.items.length;
@@ -55,6 +52,9 @@ function handleData(d, rounds, part = 1) {
         if (part === 1) {
           item = Math.floor(item / 3);
         } else if (part === 2) {
+          const superModulo = monkeys
+            .map((m) => m.divisible)
+            .reduce((acc, cur) => acc * cur);
           item = item % superModulo;
         }
         item % monkey.divisible === 0
