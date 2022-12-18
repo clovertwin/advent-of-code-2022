@@ -22,7 +22,7 @@ function part1(input) {
     })
   );
   const queue = [{ ...start, steps: 0 }];
-  const visited = new Set(`${start.x},${start.y}}`);
+  const visited = new Set([`${start.x},${start.y}`]);
   while (queue.length > 0) {
     const current = queue.shift();
     if (current.x === end.x && current.y === end.y) {
